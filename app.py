@@ -29,4 +29,6 @@ def is_valid_router():
 def add_transaction_router():
     return add_transaction()
 
-
+@app.route('/connect_node', methods = ['POST'])
+def connect_node_router():
+    return connect_node()
