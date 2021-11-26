@@ -32,3 +32,7 @@ def add_transaction_router():
 @app.route('/connect_node', methods = ['POST'])
 def connect_node_router():
     return connect_node()
+
+@app.route('/replace_chain', methods = ['GET'])
+def replace_chain_router():
+    return replace_chain()
