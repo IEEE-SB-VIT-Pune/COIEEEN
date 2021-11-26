@@ -16,3 +16,7 @@ def default():
 @app.route('/mine_block', methods=['GET'])
 def mine_block_router():
     return mine_block()
+
+@app.route('/get_chain', methods = ['GET'])
+def get_chain_router():
+    return get_chain()
