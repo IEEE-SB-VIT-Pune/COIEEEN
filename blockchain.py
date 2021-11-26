@@ -1,3 +1,7 @@
+import datetime
+import hashlib
+import json
+
 class Blockchain:
     def __init__(self):
         self.chain = []
