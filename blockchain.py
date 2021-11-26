@@ -1,6 +1,8 @@
 import datetime
 import hashlib
 import json
+from urllib.parse import urlparse
+import requests
 
 class Blockchain:
     def __init__(self):
@@ -62,7 +64,8 @@ class Blockchain:
 
     def add_node(self, address):
         parsed_url = urlparse(address)
-        self.nodes.add(parsed_url.netloc)
+        print(parsed_url.netloc)
+        self.nodes.add(address)
 
     def replace_chain(self):
         network = self.nodes
