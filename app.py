@@ -24,3 +24,9 @@ def get_chain_router():
 @app.route('/is_valid', methods = ['GET'])
 def is_valid_router():
     return is_valid()
+
+@app.route('/add_transaction', methods = ['POST'])
+def add_transaction_router():
+    return add_transaction()
+
+
