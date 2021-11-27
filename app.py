@@ -39,9 +39,13 @@ def add_transaction_router():
         amount = request.form['amount']
         return add_transaction(sender, receiver, amount)
 
-@app.route('/connect_node', methods = ['POST'])
+@app.route('/connect_node', methods = ['GET', 'POST'])
 def connect_node_router():
-    return connect_node()
+    if request.method == "GET":
+        return render_template("connect_node.html")
+    else:
+        node = request.form['node']
+        return connect_node(node)
 
 @app.route('/replace_chain', methods = ['GET'])
 def replace_chain_router():
