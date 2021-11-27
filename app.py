@@ -31,6 +31,8 @@ def is_valid_router():
 
 @app.route('/add_transaction', methods = ['GET', 'POST'])
 def add_transaction_router():
+    if request.method == "GET":
+        return render_template("add_transaction.html")
     return add_transaction()
 
 @app.route('/connect_node', methods = ['POST'])
