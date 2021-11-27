@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect
 import requests
 from uuid import uuid4
 from urllib.parse import urlparse
@@ -43,7 +43,8 @@ def add_transaction_router():
         sender = request.form['sender']
         receiver = request.form['receiver']
         amount = request.form['amount']
-        return add_transaction(sender, receiver, amount)
+        add_transaction(sender, receiver, amount)
+        return redirect('/open_transactions')
 
 @app.route('/connect_node', methods = ['GET', 'POST'])
 def connect_node_router():
@@ -51,11 +52,16 @@ def connect_node_router():
         return render_template("connect_node.html")
     else:
         node = request.form['node']
-        return connect_node(node)
+        connect_node(node)
+        return redirect('/view_network')
 
 @app.route('/replace_chain', methods = ['GET'])
 def replace_chain_router():
     return render_template('replace_chain.html', data=replace_chain())
+
+@app.route('/view_network', methods=["GET"])
+def view_network_router():
+    return render_template('view_network.html', data=get_nodes())
 
 if __name__ == "__main__":
     app.run()
