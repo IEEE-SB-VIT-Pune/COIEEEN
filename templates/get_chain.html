@@ -67,13 +67,14 @@
           <div class="modal-body p-2">
 
             <ul class="d-grid gap-4 my-5 list-unstyled">
-              <li class="d-flex gap-6" style="width: 340px">
+                {% for j in i.keys() %}
+                <li class="d-flex gap-6" style="width: 340px">
                 <div>
-                  <h5 class="mb-0">{{i}}</h5>
-                  {{data[i]}}
+                  <h5 class="mb-0">{{j}}</h5>
+                  {{i[j]}}
                 </div>
               </li>
-              
+              {% endfor %}              
             </ul>
           </div>
         </div>
