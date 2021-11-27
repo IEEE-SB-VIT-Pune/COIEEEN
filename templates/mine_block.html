@@ -3,12 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Hugo 0.88.1" />
     <title>Mine Blocks</title>
 
     <link
@@ -22,35 +16,13 @@
       crossorigin="anonymous"
     />
 
-    <!-- Bootstrap core CSS -->
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
     <!-- Custom styles for this template -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='mine_block.css') }}"
     />
   </head>
-
+<!--
   <body style="margin: 0; padding: 0">
     <div
       class="modal modal-tour position-static d-block bg-secondary py-5"
@@ -79,7 +51,62 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Block Mined!</h1>
+          <p class="lead">Congratulations. You're now a miner. ⛏</p>
+          <ul class="d-grid gap-4 my-5 list-unstyled">
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
+            <h5 class="mb-0">Index: </h5>
+            {{data['index']}}
+          </div>
+        </li>
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
+            <h5 class="mb-0">Timestamp: </h5>
+            {{data['timestamp']}}
+          </div>
+        </li>
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
+            <h5 class="mb-0">Proof: </h5>
+            {{data['proof']}}
+          </div>
+        </li>
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
+            <h5 class="mb-0">Previous Hash: </h5>
+            {{data['previous_hash']}}
+          </div>
+        </li>
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
+            <br><br>
+            <h5 class="mb-0">Transactions: </h5>
+            {% for transaction in data['transactions'] %}
+            {% for i in transaction.keys() %}
+              <li class="d-flex gap-6" style="width: 340px">
+                <div>
+                  <h6 class="mb-0">{{i}}</h5>
+                  {{transaction[i]}}
+                </div>
+              </li>
+              {% endfor %}
+              <hr/>
+              {% endfor %}
+          </div>
+        </li>
+      </ul>
+        </div>
+      </div>
+
+
+    </body>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
