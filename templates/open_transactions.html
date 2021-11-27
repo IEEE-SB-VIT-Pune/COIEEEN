@@ -22,7 +22,12 @@
       href="{{ url_for('static', filename='mine_block.css') }}"
     />
   </head>
+  <body>
+    
       <div class="jumbotron jumbotron-fluid">
+    
+        <a href="/"> <button type="button" class="btn btn-primary">Home</button> </a>
+
         <div class="container">
           <h1 class="display-4">Open Transactions. 🪙</h1>
           <p class="lead">Wake up! The following transactions have not been added to a block yet. Should we start mining? ⛏</p>
@@ -47,9 +52,6 @@
       </ul>
         </div>
       </div>
-
-
-    </body>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
