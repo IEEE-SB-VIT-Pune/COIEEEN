@@ -73,3 +73,4 @@ def replace_chain():
         response = {'message': 'All good. The chain is the largest one.',
                     'chain': blockchain.chain}
     return response
+
