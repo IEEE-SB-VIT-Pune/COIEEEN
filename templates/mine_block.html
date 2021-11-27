@@ -53,6 +53,12 @@
         </li>
         <li class="d-flex gap-6" style="width: 340px">
           <div>
+            <h5 class="mb-0">Block Hash: </h5>
+            {{data['block_hash']}}
+          </div>
+        </li>
+        <li class="d-flex gap-6" style="width: 340px">
+          <div>
             <br><br>
             <h5 class="mb-0">Transactions: </h5>
             {% for transaction in data['transactions'] %}
