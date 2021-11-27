@@ -51,7 +51,6 @@ def connect_node():
     if nodes is None:
         return "No node", 400
     for node in nodes:
-        # print(node)
         blockchain.add_node(node)
     response = {'message': 'All the nodes are now connected. The Hadcoin Blockchain now contains the following nodes:',
                 'total_nodes': list(blockchain.nodes)}
