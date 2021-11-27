@@ -74,3 +74,6 @@ def replace_chain():
                     'chain': blockchain.chain}
     return response
 
+def get_nodes():
+    return blockchain.nodes
+
