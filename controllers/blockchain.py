@@ -65,7 +65,7 @@ def connect_node():
         return "No node"
     for node in nodes:
         blockchain.add_node(node)
-    response = {'message': 'All the nodes are now connected. The Hadcoin Blockchain now contains the following nodes:',
+    response = {'message': 'All the nodes are now connected. The COIEEEN Blockchain now contains the following nodes:',
                 'total_nodes': list(blockchain.nodes)}
     return response
 
@@ -78,3 +78,4 @@ def replace_chain():
         response = {'message': 'All good. The chain is the largest one.',
                     'chain': blockchain.chain}
     return response
+
