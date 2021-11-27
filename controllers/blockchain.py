@@ -21,7 +21,7 @@ def mine_block():
                 'proof': block['proof'],
                 'previous_hash': block['previous_hash'],
                 'transactions': block['transactions']}
-    return jsonify(response), 200
+    return response
 
 def get_chain():
     response = {'chain': blockchain.chain,
