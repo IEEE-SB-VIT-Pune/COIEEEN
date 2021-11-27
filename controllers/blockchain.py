@@ -44,12 +44,17 @@ def is_valid():
         response = {'message': 'Houston, we have a problem. The Blockchain is not valid.'}
     return response
 
-def add_transaction():
-    json = request.get_json()
-    transaction_keys = ['sender', 'receiver', 'amount']
-    if not all(key in json for key in transaction_keys):
-        return 'Some elements of the transaction are missing'
-    index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
+# def add_transaction():
+#     json = request.get_json()
+#     transaction_keys = ['sender', 'receiver', 'amount']
+#     if not all(key in json for key in transaction_keys):
+#         return 'Some elements of the transaction are missing'
+#     index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
+#     response = {'message': f'This transaction will be added to Block {index}'}
+#     return response
+
+def add_transaction(sender, receiver, amount):
+    index = blockchain.add_transaction(sender, receiver, amount)
     response = {'message': f'This transaction will be added to Block {index}'}
     return response
 
