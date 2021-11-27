@@ -58,13 +58,8 @@ def add_transaction(sender, receiver, amount):
     response = {'message': f'This transaction will be added to Block {index}'}
     return response
 
-def connect_node():
-    json = request.get_json()
-    nodes = json.get('nodes')
-    if nodes is None:
-        return "No node"
-    for node in nodes:
-        blockchain.add_node(node)
+def connect_node(node):
+    blockchain.add_node(node)
     response = {'message': 'All the nodes are now connected. The COIEEEN Blockchain now contains the following nodes:',
                 'total_nodes': list(blockchain.nodes)}
     return response
