@@ -15,13 +15,11 @@ def default():
 
 @app.route('/mine_block', methods=['GET'])
 def mine_block_router():
-    data = mine_block()
-    return render_template('mine_block.html', data = data)
+    return render_template('mine_block.html', data = mine_block())
 
 @app.route('/get_chain', methods = ['GET'])
 def get_chain_router():
-    data = get_chain()
-    return render_template('get_chain.html', data = data)
+    return render_template('get_chain.html', data = get_chain())
 
 @app.route('/open_transactions', methods=['GET'])
 def open_transactions_router():
@@ -41,7 +39,7 @@ def connect_node_router():
 
 @app.route('/replace_chain', methods = ['GET'])
 def replace_chain_router():
-    return replace_chain()
+    return render_template('replace_chain.html', data=replace_chain())
 
 if __name__ == "__main__":
     app.run()
