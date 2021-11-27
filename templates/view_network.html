@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COIEEEN</title>
+    <title>Mine Blocks</title>
 
     <link
       rel="canonical"
@@ -27,24 +27,22 @@
       <div class="jumbotron jumbotron-fluid">
 
         <a href="/"> <button type="button" class="btn btn-primary" style="margin-left: 5%; margin-top: 5%;">Home</button> </a>
-<br><br>
+        <br>
+        <br>
         <div class="container">
-          <h1 class="display-4">Open Transactions. 🪙</h1>
-          <p class="lead">Wake up! The following transactions have not been added to a block yet. Should we start mining? ⛏</p>
+          <h1 class="display-4">Welp you do know some nodes.</h1>
           <ul class="d-grid gap-4 my-5 list-unstyled">
         <li class="d-flex gap-6" style="width: 340px">
           <div>
             <br><br>
-            <h5 class="mb-0">Transactions: </h5>
-            {% for transaction in data %}
-            {% for i in transaction.keys() %}
+            <h5 class="mb-0">Network nodes: </h5>
+            {% for node in data %}
               <li class="d-flex gap-6" style="width: 340px">
                 <div>
                   <h6 class="mb-0">{{i}}</h5>
-                  {{transaction[i]}}
+                  {{node}}
                 </div>
               </li>
-              {% endfor %}
               <hr/>
               {% endfor %}
           </div>

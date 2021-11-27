@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Get Chain</title>
+    <title>COIEEEN</title>
 
     <link
       rel="canonical"
@@ -52,7 +52,6 @@
   </head>
 
   <body style="margin: 0; padding: 0">
-
     <div
       class="modal modal-tour position-static d-block bg-secondary py-5"
       tabindex="-1"
@@ -60,25 +59,26 @@
       id="modalTour"
       style="width: 100%; height: 100vh"
     >
-
-    <a href="/"> <button type="button" class="btn btn-primary" style="margin-left: 5%;">Home</button> </a>
-
+      <a href="/">
+        <button type="button" class="btn btn-primary" style="margin-left: 5%">
+          Home
+        </button>
+      </a>
+      <br /><br />
       <div class="modal-dialog" role="document">
-        
         {% for i in data['chain'] %}
-          
+
         <div class="modal-content rounded-10 shadow" style="width: 150%">
           <div class="modal-body p-5">
-
             <ul class="d-grid gap-4 my-5 list-unstyled">
-                {% for j in i.keys() %}
-                <li class="d-flex gap-6" style="width: 340px">
+              {% for j in i.keys() %}
+              <li class="d-flex gap-6" style="width: 340px">
                 <div>
                   <h5 class="mb-0">{{j}}</h5>
                   {{i[j]}}
                 </div>
               </li>
-              {% endfor %}              
+              {% endfor %}
             </ul>
           </div>
         </div>
