@@ -21,6 +21,12 @@ def mine_block_router():
 def get_chain_router():
     return render_template('get_chain.html', data = get_chain())
 
+@app.route('/get_chain_REST', methods=['GET'])
+def get_chain_REST_router():
+    response = {'chain': blockchain.chain,
+                'length': len(blockchain.chain)}
+    return jsonify(response)
+
 @app.route('/open_transactions', methods=['GET'])
 def open_transactions_router():
     return render_template('open_transactions.html', data=blockchain.transactions)
