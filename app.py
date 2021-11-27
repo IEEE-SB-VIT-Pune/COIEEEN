@@ -29,7 +29,7 @@ def open_transactions_router():
 
 @app.route('/is_valid', methods = ['GET'])
 def is_valid_router():
-    return is_valid()
+    return render_template('is_valid.html', data=is_valid())
 
 @app.route('/add_transaction', methods = ['GET', 'POST'])
 def add_transaction_router():
