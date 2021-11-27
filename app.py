@@ -16,7 +16,6 @@ def default():
 @app.route('/mine_block', methods=['GET'])
 def mine_block_router():
     data = mine_block()
-    print(data)
     return render_template('mine_block.html', data = data)
 
 @app.route('/get_chain', methods = ['GET'])
