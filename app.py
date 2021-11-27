@@ -23,6 +23,10 @@ def get_chain_router():
     data = get_chain()
     return render_template('get_chain.html', data = data)
 
+@app.route('/open_transactions', methods=['GET'])
+def open_transactions_router():
+    return render_template('open_transactions.html', data=blockchain.transactions)
+
 @app.route('/is_valid', methods = ['GET'])
 def is_valid_router():
     return is_valid()
