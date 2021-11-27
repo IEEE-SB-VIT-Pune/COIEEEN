@@ -26,7 +26,7 @@ def mine_block():
 def get_chain():
     response = {'chain': blockchain.chain,
                 'length': len(blockchain.chain)}
-    return jsonify(response), 200
+    return response
 
 def is_valid():
     is_valid = blockchain.is_chain_valid(blockchain.chain)
@@ -34,27 +34,27 @@ def is_valid():
         response = {'message': 'All good. The Blockchain is valid.'}
     else:
         response = {'message': 'Houston, we have a problem. The Blockchain is not valid.'}
-    return jsonify(response), 200
+    return response
 
 def add_transaction():
     json = request.get_json()
     transaction_keys = ['sender', 'receiver', 'amount']
     if not all(key in json for key in transaction_keys):
-        return 'Some elements of the transaction are missing', 400
+        return 'Some elements of the transaction are missing'
     index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
     response = {'message': f'This transaction will be added to Block {index}'}
-    return jsonify(response), 201
+    return response
 
 def connect_node():
     json = request.get_json()
     nodes = json.get('nodes')
     if nodes is None:
-        return "No node", 400
+        return "No node"
     for node in nodes:
         blockchain.add_node(node)
     response = {'message': 'All the nodes are now connected. The Hadcoin Blockchain now contains the following nodes:',
                 'total_nodes': list(blockchain.nodes)}
-    return jsonify(response), 201
+    return response
 
 def replace_chain():
     is_chain_replaced = blockchain.replace_chain()
@@ -64,4 +64,4 @@ def replace_chain():
     else:
         response = {'message': 'All good. The chain is the largest one.',
                     'actual_chain': blockchain.chain}
-    return jsonify(response), 200
+    return response
