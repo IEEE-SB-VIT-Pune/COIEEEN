@@ -25,8 +25,7 @@
     <!-- Bootstrap core CSS -->
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap');
-      html {
+      * {
         margin: 0;
         padding: 0;
       }
@@ -53,83 +52,25 @@
   </head>
 
   <body style="margin: 0; padding: 0">
-    <section
+    <div
       class="modal modal-tour position-static d-block bg-secondary py-5"
       tabindex="-1"
       role="dialog"
       id="modalTour"
-      style="
-        width: 100%;
-        height: 100vh;
-        background: #8a2387;
-        background: -webkit-linear-gradient(
-          to right,
-          #f27121,
-          #e94057,
-          #8a2387
-        );
-        background: linear-gradient(to right, #f27121, #e94057, #8a2387);
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      "
+      style="width: 100%; height: 100vh"
     >
-      <div
-        class="modal-dialog"
-        role="document"
-        style="
-          display: flex !important;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <div
-          class="modal-content rounded-10 shadow"
-          style="
-            width: 150%;
-            display: flex !important;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            border-radius: 6vh;
-            width: 70vw;
-            height: 70vh;
-            overflow: hidden;
-          "
-        >
-          <div
-            class="modal-body p-2"
-            style="
-              display: flex !important;
-              flex-direction: column;
-              align-items: center;
-              justify-content: flex-start;
-              min-width: 100%;
-              padding: 2vw !important;
-              border-radius: 3vh !important;
-            "
-          >
-            <h2
-              class="fw-bold mb-0"
-              style="
-                color: #ffc300;
-                font-size: 10vh;
-                text-align: center;
-                color: #faeca0;
-                text-shadow: -0.34vh 0 0.56vh rgb(36 36 36);
-                font-family: 'Courgette', cursive;
-              "
-            >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-10 shadow" style="width: 150%">
+          <div class="modal-body p-2">
+            <h2 class="fw-bold mb-0" style="color: #ffc300; margin-left: 35%">
               Mined Block
             </h2>
 
-            <ul class="d-grid gap-4 my-5 list-unstyled" style="min-width: 100%; font-size: 3vh;">
+            <ul class="d-grid gap-4 my-5 list-unstyled">
               {% for i in data.keys() %}
-              <li class="d-flex gap-6" style="width: 90%; font-size: 3vh;">
+              <li class="d-flex gap-6" style="width: 340px">
                 <div>
-                  <h5 class="mb-0" style='font-size: 3vh;'>{{i}}</h5>
+                  <h5 class="mb-0">{{i}}</h5>
                   {{data[i]}}
                 </div>
               </li>
@@ -138,7 +79,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
