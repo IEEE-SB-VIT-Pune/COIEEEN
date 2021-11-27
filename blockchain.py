@@ -45,7 +45,7 @@ class Blockchain:
         block_index = 1
         while block_index < len(chain):
             block = chain[block_index]
-            if block['previous_hash'] != self.hash(previous_block):
+            if block['previous_hash'] != previous_block['block_hash']:
                 return False
             previous_proof = previous_block['proof']
             proof = block['proof']
@@ -70,7 +70,6 @@ class Blockchain:
         network = self.nodes
         longest_chain = None
         max_length = len(self.chain)
-        print(max_length)
         for node in network:
             response = requests.get(f'http://{node}/get_chain')
             if response.status_code == 200:
@@ -79,7 +78,6 @@ class Blockchain:
                 if length > max_length and self.is_chain_valid(chain):
                     max_length = length
                     longest_chain = chain
-        print(max_length)
         if longest_chain:
             self.chain = longest_chain
             return True
