@@ -15,11 +15,13 @@ def mine_block():
 
     proof = blockchain.proof_of_work(previous_proof)
 
-    previous_hash = blockchain.hash(previous_block)
+    previous_hash = previous_block['block_hash']
+
+    block_hash = hashlib.sha256(str(proof**2 - previous_proof**2).encode()).hexdigest()
 
 
     blockchain.add_transaction(sender = node_address, receiver = 'You', amount = 1)
-    block = blockchain.create_block(proof, previous_hash, '0')
+    block = blockchain.create_block(proof, previous_hash, block_hash)
     response = {'message': 'Congratulations, you just mined a block!',
                 'index': block['index'],
                 'timestamp': block['timestamp'],
