@@ -20,7 +20,8 @@ def mine_block_router():
 
 @app.route('/get_chain', methods = ['GET'])
 def get_chain_router():
-    return get_chain()
+    data = get_chain()
+    return render_template('get_chain.html', data = data)
 
 @app.route('/is_valid', methods = ['GET'])
 def is_valid_router():

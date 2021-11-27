@@ -1,5 +1,6 @@
 from flask import jsonify, request
 import json
+import hashlib
 from uuid import uuid4
 
 from blockchain import Blockchain
@@ -11,15 +12,20 @@ node_address = str(uuid4()).replace('-', '')
 def mine_block():
     previous_block = blockchain.get_previous_block()
     previous_proof = previous_block['proof']
+
     proof = blockchain.proof_of_work(previous_proof)
+
     previous_hash = blockchain.hash(previous_block)
+
+
     blockchain.add_transaction(sender = node_address, receiver = 'You', amount = 1)
-    block = blockchain.create_block(proof, previous_hash)
+    block = blockchain.create_block(proof, previous_hash, '0')
     response = {'message': 'Congratulations, you just mined a block!',
                 'index': block['index'],
                 'timestamp': block['timestamp'],
                 'proof': block['proof'],
                 'previous_hash': block['previous_hash'],
+                'block_hash': block['block_hash'],
                 'transactions': block['transactions']}
     return response
 

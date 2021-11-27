@@ -8,14 +8,15 @@ class Blockchain:
     def __init__(self):
         self.chain = []
         self.transactions = []
-        self.create_block(proof = 1, previous_hash = '0')
+        self.create_block(proof = 1, previous_hash = '0', block_hash = '0')
         self.nodes = set()
 
-    def create_block(self, proof, previous_hash):
+    def create_block(self, proof, previous_hash, block_hash):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.datetime.now()),
                  'proof': proof,
                  'previous_hash': previous_hash,
+                 'block_hash': block_hash,
                  'transactions': self.transactions}
         self.transactions = []
         self.chain.append(block)
