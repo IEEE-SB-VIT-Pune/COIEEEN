@@ -38,7 +38,7 @@
         <a href="/"> <button type="button" class="btn btn-primary" style="margin-left: 5%; margin-top: 5%;">Home</button> </a>
 <br><br>
         <div class="container">
-            {% if 'All' in data['message'] %}
+            {% if data %}
           <h1 class="display-4 success">Hurray! Everything is alright!</h1>
           <p class="lead">All good. The Blockchain is valid.</p>
           {% else %}
