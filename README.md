@@ -8,7 +8,7 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
 - The next pillar is the consensus algorithm to make sure that each node in the decentralised network has the same chain. 
 
 
-The main functionalities of this project are:
+#### The main functionalities of this project are:
 
 **Add transaction:** It takes the sender’s and receiver’s details along with the transaction amount to make a list of transactions. Multiple transactions can be added to the list.
 
@@ -34,9 +34,11 @@ The main functionalities of this project are:
 ### Windows 
 
 1. Creating the environment 
-   `mkdir IEEE-Blockchain 
-   cd IEEE-Blockchain 
-   py -3 -m venv venv`
+    ```
+    mkdir IEEE-Blockchain 
+    cd IEEE-Blockchain 
+    python3 -m venv venv
+    ```
 
 2. Activate the environment 
    `venv\Scripts\activate`
@@ -48,8 +50,10 @@ The main functionalities of this project are:
    `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
 
 5. Navigate to the project and run
-   `cd COIEEEN
-   flask run`
+    ```
+    cd COIEEEN
+    flask run
+    ```
 
 6. To run on different servers open a new window:
    `flask run -p <PORT_NUMBER>`
@@ -61,9 +65,11 @@ Note: If any packages are missing:
 ### MacOS / Linux 
 
 1. Creating the environment 
-   `mkdir IEEE-Blockchain 
+    ```
+    mkdir IEEE-Blockchain 
     cd IEEE-Blockchain 
-    python3 -m venv venv` 
+    python3 -m venv venv
+    ``` 
 
 2. Activate the environment 
    `. venv/bin/activate` 
@@ -75,8 +81,10 @@ Note: If any packages are missing:
    `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
 
 5. Navigate to the project and run
-   `cd COIEEEN
-   flask run`
+    ```
+    cd COIEEEN
+    flask run
+    ```
 
 6. To run on different servers, open a new terminal tab:
    `flask run -p <PORT_NUMBER>`
