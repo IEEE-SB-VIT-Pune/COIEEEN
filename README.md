@@ -8,7 +8,7 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
 - The next pillar is the consensus algorithm to make sure that each node in the decentralised network has the same chain. 
 
 
-#### The main functionalities of this project are:
+### The main functionalities of this project are:
 
 **Add transaction:** It takes the sender’s and receiver’s details along with the transaction amount to make a list of transactions. Multiple transactions can be added to the list.
 
@@ -46,10 +46,14 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
    ```
 
 3. Install Flask 
-   ```pip install Flask```
+   ```
+   pip install Flask
+   ```
 
 4. Clone the repo
-   `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
+   ```
+   git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git
+   ```
 
 5. Navigate to the project and run
     ```
@@ -58,10 +62,14 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
     ```
 
 6. To run on different servers open a new window:
-   `flask run -p <PORT_NUMBER>`
+   ```
+   flask run -p <PORT_NUMBER>
+   ```
 
 Note: If any packages are missing:
-   `pip install <package name>` 
+   ```
+   pip install <package name>
+   ``` 
 
   
 ### MacOS / Linux 
@@ -74,13 +82,19 @@ Note: If any packages are missing:
     ``` 
 
 2. Activate the environment 
-   `. venv/bin/activate` 
+   ```
+   . venv/bin/activate
+   ``` 
 
 3. Install Flask 
-   `pip install Flask`
+   ```
+   pip install Flask
+   ```
 
 4. Clone the repo
-   `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
+   ```
+   git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git
+   ```
 
 5. Navigate to the project and run
     ```
@@ -89,11 +103,15 @@ Note: If any packages are missing:
     ```
 
 6. To run on different servers, open a new terminal tab:
-   `flask run -p <PORT_NUMBER>`
+   ```
+   flask run -p <PORT_NUMBER>
+   ```
 
 
 Note: If any packages are missing:
-   `pip install <package name>`
+   ```
+   pip install <package name>
+   ```
 
 
 
