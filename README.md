@@ -72,6 +72,10 @@ Note: If any packages are missing:
    ``` 
 
   
+  
+  
+  
+  
 ### MacOS / Linux :desktop_computer:
 
 1. Creating the environment 
