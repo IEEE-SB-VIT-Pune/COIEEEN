@@ -1,4 +1,4 @@
-# COIEEEN
+# COIEEEN :coin:
 #### Part of IEEE's workshop - Build your own Blockchain from Cryptocurrency to Smart Contracts
 
 A cryptocurrency is a digital asset designed to work as a medium of exchange using cryptography to secure the transactions and to control the creation of additional units of the currency.
@@ -29,9 +29,9 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
 
 
 
-## Steps to run this project:
+## :round_pushpin: Commands to run this project:
 
-### Windows 
+### Windows :desktop_computer:
 
 1. Creating the environment 
     ```
@@ -72,7 +72,7 @@ Note: If any packages are missing:
    ``` 
 
   
-### MacOS / Linux 
+### MacOS / Linux :desktop_computer:
 
 1. Creating the environment 
     ```
