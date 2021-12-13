@@ -1,5 +1,5 @@
 # COIEEEN
-Part of IEEE's workshop - Build your own Blockchain from Cryptocurrency to Smart Contracts
+#### Part of IEEE's workshop - Build your own Blockchain from Cryptocurrency to Smart Contracts
 
 A cryptocurrency is a digital asset designed to work as a medium of exchange using cryptography to secure the transactions and to control the creation of additional units of the currency.
 - This project implements a simple blockchain which is developed and decentralised to create a cryptocurrency “COIEEEN”
