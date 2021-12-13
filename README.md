@@ -28,64 +28,62 @@ The main functionalities of this project are:
 
 
 
- 
-
 
 ## Steps to run this project:
 
 ### Windows 
 
 1. Creating the environment 
-  > mkdir IEEE-Blockchain 
-  > cd IEEE-Blockchain 
-  > py -3 -m venv venv 
+   `mkdir IEEE-Blockchain 
+   cd IEEE-Blockchain 
+   py -3 -m venv venv`
 
 2. Activate the environment 
-  > venv\Scripts\activate 
+   `venv\Scripts\activate`
 
 3. Install Flask 
-  > pip install Flask 
+   `pip install Flask`
 
 4. Clone the repo
-	> git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git
+   `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
 
 5. Navigate to the project and run
-	>cd COIEEEN
-	>flask run
+   `cd COIEEEN
+   flask run`
 
 6. To run on different servers open a new window:
-	> flask run -p <PORT_NUMBER>
+   `flask run -p <PORT_NUMBER>`
 
 Note: If any packages are missing:
-	>pip install <package name> 
+   `pip install <package name>` 
 
   
 ### MacOS / Linux 
 
 1. Creating the environment 
-  $ mkdir IEEE-Blockchain 
-  $ cd IEEE-Blockchain 
-  $ python3 -m venv venv 
+   `mkdir IEEE-Blockchain 
+    cd IEEE-Blockchain 
+    python3 -m venv venv` 
 
 2. Activate the environment 
-  $ . venv/bin/activate 
+   `. venv/bin/activate` 
 
 3. Install Flask 
-  $ pip install Flask
+   `pip install Flask`
 
 4. Clone the repo
-	$ git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git
+   `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
 
 5. Navigate to the project and run
-	$ cd COIEEEN
-	$ flask run
+   `cd COIEEEN
+   flask run`
 
 6. To run on different servers, open a new terminal tab:
-	$ flask run -p <PORT_NUMBER>
+   `flask run -p <PORT_NUMBER>`
 
 
 Note: If any packages are missing:
-	$pip install <package name> 
+   `pip install <package name>`
 
 
 
