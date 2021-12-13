@@ -41,10 +41,12 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
     ```
 
 2. Activate the environment 
-   `venv\Scripts\activate`
+   ```
+   venv\Scripts\activate
+   ```
 
 3. Install Flask 
-   `pip install Flask`
+   ```pip install Flask```
 
 4. Clone the repo
    `git clone https://github.com/IEEE-SB-VIT-Pune/COIEEEN.git`
