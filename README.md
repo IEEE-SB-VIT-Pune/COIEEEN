@@ -8,7 +8,7 @@ A cryptocurrency is a digital asset designed to work as a medium of exchange usi
 - The next pillar is the consensus algorithm to make sure that each node in the decentralised network has the same chain. 
 
 
-### The main functionalities of this project are:
+### :round_pushpin: The main functionalities of this project are:
 
 **Add transaction:** It takes the sender’s and receiver’s details along with the transaction amount to make a list of transactions. Multiple transactions can be added to the list.
 
